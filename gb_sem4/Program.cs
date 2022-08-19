@@ -3,11 +3,13 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
+// Первый вариант решения
 // double exponentiation(double a, double b)
 // {
 //     return Math.Pow(a, b);
 // }
 
+// Второй вариант решения
 double exponentiation(double a, double b)
 {
     double result = 1;
@@ -22,7 +24,7 @@ Console.Write("Введите число А: ");
 double numA = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число B: ");
 double numB = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(exponentiation(numA, numB));
+Console.WriteLine($"Результат: {exponentiation(numA, numB)}");
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -34,13 +36,33 @@ Console.WriteLine(exponentiation(numA, numB));
 
 // Console.Write("Введите число: ");
 // int num = Convert.ToInt32(Console.ReadLine());
-// amountNum(num);
+// int res = num;
+// int result = 0;
+// int[] arr = new int[amountNum(num)];
 
-// void amountNum (int a){
+// for (int i = 0; i != arr.Length; i++) // записываем значения в массив
+// {
+//     res %= 10;
+//     num /= 10;
+//     arr[i] = res;
+//     res = num;
+// }
+
+// // складываем значения массива
+// for (int j = 0; j != arr.Length; j++)
+// {
+//     result = arr[j] + result;
+// }
+
+// Console.WriteLine(result);
+
+// int amountNum(int a) // считаем количество символов в введенном числе
+// {
 //     int i = 0;
-//     while (a > 0) {
+//     while (a > 0)
+//     {
 //         a /= 10;
 //         i++;
 //     }
-//     Console.WriteLine($"Количество цифр: {i}");
+//     return i;
 // }
