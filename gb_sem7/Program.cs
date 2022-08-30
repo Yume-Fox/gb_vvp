@@ -5,16 +5,16 @@
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
 
-double[,] arr = new double[3, 4];
-for (int i = 0; i < arr.GetLength(0); i++)
-{
-    for (int j = 0; j < arr.GetLength(1); j++)
-    {
-        arr[i, j] = Math.Round(new Random().NextDouble() * new Random().Next(10, 99), 2);
-        Console.Write($"{arr[i, j]}\t");
-    }
-    Console.WriteLine();
-}
+// double[,] arr = new double[3, 4];
+// for (int i = 0; i < arr.GetLength(0); i++)
+// {
+//     for (int j = 0; j < arr.GetLength(1); j++)
+//     {
+//         arr[i, j] = Math.Round(new Random().NextDouble() * new Random().Next(10, 99), 2);
+//         Console.Write($"{arr[i, j]}\t");
+//     }
+//     Console.WriteLine();
+// }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -48,29 +48,29 @@ for (int i = 0; i < arr.GetLength(0); i++)
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-// int[,] arr = GenerationArray();
-// for (int i = 0; i < arr.GetLength(0); i++)
-// {
-//     int result = 0;
-//     for (int j = 0; j < arr.GetLength(1); j++)
-//     {
-//         result += arr[j, i];
-//     }
-//     result /= arr.GetLength(0);
-//     Console.Write($"{result}\t");
-// }
+int[,] arr = GenerationArray();
+for (int i = 0; i < arr.GetLength(0); i++)
+{
+    double result = 0;
+    for (int j = 0; j < arr.GetLength(1); j++)
+    {
+        result += arr[j, i];
+    }
+    result /= arr.GetLength(0);
+    Console.Write($"{result:f1}\t");
+}
 
-// int[,] GenerationArray()
-// {
-//     int[,] arr = new int[3, 3];
-//     for (int i = 0; i < arr.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < arr.GetLength(1); j++)
-//         {
-//             arr[i, j] = new Random().Next(0, 11);
-//             Console.Write($"{arr[i, j]}\t");
-//         }
-//         Console.WriteLine();
-//     }
-//     return arr;
-// }
+int[,] GenerationArray()
+{
+    int[,] arr = new int[3, 3];
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            arr[i, j] = new Random().Next(1, 11);
+            Console.Write($"{arr[i, j]}\t");
+        }
+        Console.WriteLine();
+    }
+    return arr;
+}
